@@ -1,0 +1,132 @@
+{
+  "n_rows": 100000,
+  "sample_size": 600,
+  "batch_layer": {
+    "technology": "Apache Spark (PySpark, local[*] mode)",
+    "total_rows_processed": 100000,
+    "spark_partitions_used": 8,
+    "by_service_class": [
+      {
+        "service_class": "mMTC",
+        "task_count": 49720,
+        "avg_cpu": 1.0,
+        "avg_memory_mb": 19.96,
+        "avg_bandwidth_mbps": 2.0,
+        "avg_work_units": 10.0,
+        "total_bandwidth_demand_mbps": 99416.6,
+        "stddev_work_units": 2.885
+      },
+      {
+        "service_class": "eMBB",
+        "task_count": 30023,
+        "avg_cpu": 2.996,
+        "avg_memory_mb": 320.34,
+        "avg_bandwidth_mbps": 29.93,
+        "avg_work_units": 80.02,
+        "total_bandwidth_demand_mbps": 898471.7,
+        "stddev_work_units": 23.214
+      },
+      {
+        "service_class": "URLLC",
+        "task_count": 20257,
+        "avg_cpu": 1.499,
+        "avg_memory_mb": 79.74,
+        "avg_bandwidth_mbps": 6.0,
+        "avg_work_units": 14.91,
+        "total_bandwidth_demand_mbps": 121625.7,
+        "stddev_work_units": 5.77
+      }
+    ],
+    "by_node": [
+      {
+        "assigned_node": "edge-2",
+        "node_type": "EDGE",
+        "task_count": 35089,
+        "total_cpu_demand": 40141.9,
+        "total_memory_demand_mb": 1307689.9,
+        "total_bandwidth_demand_mbps": 110908.6,
+        "avg_work_units": 11.47
+      },
+      {
+        "assigned_node": "edge-1",
+        "node_type": "EDGE",
+        "task_count": 34888,
+        "total_cpu_demand": 39950.5,
+        "total_memory_demand_mb": 1299986.1,
+        "total_bandwidth_demand_mbps": 110133.7,
+        "avg_work_units": 11.37
+      },
+      {
+        "assigned_node": "ran-1",
+        "node_type": "RAN",
+        "task_count": 30023,
+        "total_cpu_demand": 89952.7,
+        "total_memory_demand_mb": 9617715.0,
+        "total_bandwidth_demand_mbps": 898471.7,
+        "avg_work_units": 80.02
+      }
+    ]
+  },
+  "speed_layer": {
+    "wall_clock_seconds": 1.138,
+    "total_requests": 600,
+    "throughput_tasks_per_sec": 370.733,
+    "latency": {
+      "mean_ms": 14.5,
+      "min_ms": 5.349,
+      "max_ms": 47.499,
+      "p95_ms": 40.795,
+      "jitter_ms": 8.797
+    },
+    "packet_loss_rate": 0.2967,
+    "status_breakdown": {
+      "completed": 422,
+      "rejected": 178
+    },
+    "load_distribution": {
+      "edge-2": 210,
+      "edge-1": 210,
+      "ran-1": 180
+    },
+    "per_node_latency": {
+      "edge-2": {
+        "count": 200,
+        "mean_ms": 13.131,
+        "max_ms": 47.499
+      },
+      "edge-1": {
+        "count": 198,
+        "mean_ms": 12.666,
+        "max_ms": 40.96
+      },
+      "ran-1": {
+        "count": 24,
+        "mean_ms": 41.032,
+        "max_ms": 41.886
+      }
+    },
+    "bottleneck_analysis": {
+      "ranked_nodes_worst_first": [
+        {
+          "node": "ran-1",
+          "mean_latency_ms": 41.032,
+          "cpu_utilization": 0.0,
+          "score": 41.032
+        },
+        {
+          "node": "edge-2",
+          "mean_latency_ms": 13.131,
+          "cpu_utilization": 0.0,
+          "score": 13.131
+        },
+        {
+          "node": "edge-1",
+          "mean_latency_ms": 12.666,
+          "cpu_utilization": 0.0,
+          "score": 12.666
+        }
+      ],
+      "likely_bottleneck": "ran-1"
+    }
+  }
+}

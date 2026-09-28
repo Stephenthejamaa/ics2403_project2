@@ -1,0 +1,4 @@
+n_edge_nodes,throughput_tasks_per_sec,mean_latency_ms,p95_latency_ms,packet_loss_rate
+1,177.104,17.413,70.518,0.5778
+2,152.944,28.584,108.032,0.2556
+4,156.556,31.929,107.755,0.0778

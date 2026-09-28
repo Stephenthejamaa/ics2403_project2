@@ -1,0 +1,164 @@
+{
+  "n_tasks": 120,
+  "concurrency": 6,
+  "workload_composition": {
+    "eMBB": 37,
+    "URLLC": 29,
+    "mMTC": 54
+  },
+  "summary": {
+    "wall_clock_seconds": 0.769,
+    "total_requests": 120,
+    "throughput_tasks_per_sec": 139.218,
+    "latency": {
+      "mean_ms": 28.26,
+      "min_ms": 5.492,
+      "max_ms": 118.917,
+      "p95_ms": 93.782,
+      "jitter_ms": 30.457
+    },
+    "packet_loss_rate": 0.1083,
+    "status_breakdown": {
+      "completed": 107,
+      "rejected": 12,
+      "dropped": 1
+    },
+    "load_distribution": {
+      "edge-1": 42,
+      "edge-2": 41,
+      "ran-1": 37
+    },
+    "per_node_latency": {
+      "edge-1": {
+        "count": 41,
+        "mean_ms": 12.847,
+        "max_ms": 29.404
+      },
+      "edge-2": {
+        "count": 41,
+        "mean_ms": 12.232,
+        "max_ms": 26.146
+      },
+      "ran-1": {
+        "count": 25,
+        "mean_ms": 79.824,
+        "max_ms": 118.917
+      }
+    },
+    "bottleneck_analysis": {
+      "ranked_nodes_worst_first": [
+        {
+          "node": "ran-1",
+          "mean_latency_ms": 79.824,
+          "cpu_utilization": 0.0,
+          "score": 79.824
+        },
+        {
+          "node": "edge-1",
+          "mean_latency_ms": 12.847,
+          "cpu_utilization": 0.0,
+          "score": 12.847
+        },
+        {
+          "node": "edge-2",
+          "mean_latency_ms": 12.232,
+          "cpu_utilization": 0.0,
+          "score": 12.232
+        }
+      ],
+      "likely_bottleneck": "ran-1"
+    }
+  },
+  "node_utilization_raw": {
+    "edge-1": {
+      "status": "ok",
+      "node": "edge-1",
+      "node_type": "EDGE",
+      "tasks_received": 42,
+      "tasks_completed": 41,
+      "tasks_dropped": 1,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 12.847,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 44,
+      "_rtt_ms": 2.565
+    },
+    "edge-2": {
+      "status": "ok",
+      "node": "edge-2",
+      "node_type": "EDGE",
+      "tasks_received": 41,
+      "tasks_completed": 41,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 12.232,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 43,
+      "_rtt_ms": 3.608
+    },
+    "ran-1": {
+      "status": "ok",
+      "node": "ran-1",
+      "node_type": "RAN",
+      "tasks_received": 37,
+      "tasks_completed": 25,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 12,
+      "avg_latency_ms": 79.824,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 39,
+      "_rtt_ms": 3.284
+    },
+    "core-1": {
+      "status": "ok",
+      "node": "core-1",
+      "node_type": "CORE",
+      "tasks_received": 0,
+      "tasks_completed": 0,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 0.0,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 2,
+      "_rtt_ms": 2.315
+    },
+    "cloud-1": {
+      "status": "ok",
+      "node": "cloud-1",
+      "node_type": "CLOUD",
+      "tasks_received": 0,
+      "tasks_completed": 0,
+      "tasks_dropped": 0,
+      "tasks_rejected_no_resources": 0,
+      "avg_latency_ms": 0.0,
+      "resource_utilization": {
+        "cpu": 0.0,
+        "memory": 0.0,
+        "bandwidth": 0.0
+      },
+      "current_leader": null,
+      "lamport_ts": 2,
+      "_rtt_ms": 2.795
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "tasks_demo": [
+    {
+      "task": {
+        "name": "urllc-control-loop",
+        "service_class": "URLLC",
+        "cpu": 1,
+        "memory": 64,
+        "bandwidth": 5,
+        "work_units": 20
+      },
+      "reply": {
+        "status": "completed",
+        "node": "edge-1",
+        "node_type": "EDGE",
+        "pid": 1,
+        "server_latency_ms": 21.914,
+        "_rtt_ms": 30.168
+      }
+    },
+    {
+      "task": {
+        "name": "embb-video-chunk",
+        "service_class": "eMBB",
+        "cpu": 2,
+        "memory": 256,
+        "bandwidth": 20,
+        "work_units": 80
+      },
+      "reply": {
+        "status": "completed",
+        "node": "edge-1",
+        "node_type": "EDGE",
+        "pid": 2,
+        "server_latency_ms": 80.565,
+        "_rtt_ms": 83.261
+      }
+    },
+    {
+      "task": {
+        "name": "mmtc-sensor-burst",
+        "service_class": "mMTC",
+        "cpu": 1,
+        "memory": 32,
+        "bandwidth": 2,
+        "work_units": 30
+      },
+      "reply": {
+        "status": "completed",
+        "node": "edge-1",
+        "node_type": "EDGE",
+        "pid": 3,
+        "server_latency_ms": 30.679,
+        "_rtt_ms": 32.992
+      }
+    }
+  ],
+  "node_state": {
+    "edge-1": {
+      "node_type": "EDGE",
+      "process_table": [
+        {
+          "pid": 1,
+          "name": "urllc-control-loop",
+          "service_class": "URLLC",
+          "cpu_required": 1,
+          "memory_required": 64,
+          "bandwidth_required": 5,
+          "work_units": 20,
+          "state": "TERMINATED",
+          "created_at": 1790573068.359141,
+          "started_at": 1790573068.3597708,
+          "finished_at": 1790573068.3810043
+        },
+        {
+          "pid": 2,
+          "name": "embb-video-chunk",
+          "service_class": "eMBB",
+          "cpu_required": 2,
+          "memory_required": 256,
+          "bandwidth_required": 20,
+          "work_units": 80,
+          "state": "TERMINATED",
+          "created_at": 1790573068.385354,
+          "started_at": 1790573068.3854144,
+          "finished_at": 1790573068.4658713
+        },
+        {
+          "pid": 3,
+          "name": "mmtc-sensor-burst",
+          "service_class": "mMTC",
+          "cpu_required": 1,
+          "memory_required": 32,
+          "bandwidth_required": 2,
+          "work_units": 30,
+          "state": "TERMINATED",
+          "created_at": 1790573068.4688036,
+          "started_at": 1790573068.4688447,
+          "finished_at": 1790573068.4994562
+        }
+      ],
+      "metrics": {
+        "status": "ok",
+        "node": "edge-1",
+        "node_type": "EDGE",
+        "tasks_received": 3,
+        "tasks_completed": 3,
+        "tasks_dropped": 0,
+        "tasks_rejected_no_resources": 0,
+        "avg_latency_ms": 44.386,
+        "resource_utilization": {
+          "cpu": 0.0,
+          "memory": 0.0,
+          "bandwidth": 0.0
+        },
+        "current_leader": null,
+        "lamport_ts": 6,
+        "_rtt_ms": 7.543
+      }
+    },
+    "edge-2": {
+      "node_type": "EDGE",
+      "process_table": [],
+      "metrics": {
+        "status": "ok",
+        "node": "edge-2",
+        "node_type": "EDGE",
+        "tasks_received": 0,
+        "tasks_completed": 0,
+        "tasks_dropped": 0,
+        "tasks_rejected_no_resources": 0,
+        "avg_latency_ms": 0.0,
+        "resource_utilization": {
+          "cpu": 0.0,
+          "memory": 0.0,
+          "bandwidth": 0.0
+        },
+        "current_leader": null,
+        "lamport_ts": 3,
+        "_rtt_ms": 2.355
+      }
+    },
+    "ran-1": {
+      "node_type": "RAN",
+      "process_table": [],
+      "metrics": {
+        "status": "ok",
+        "node": "ran-1",
+        "node_type": "RAN",
+        "tasks_received": 0,
+        "tasks_completed": 0,
+        "tasks_dropped": 0,
+        "tasks_rejected_no_resources": 0,
+        "avg_latency_ms": 0.0,
+        "resource_utilization": {
+          "cpu": 0.0,
+          "memory": 0.0,
+          "bandwidth": 0.0
+        },
+        "current_leader": null,
+        "lamport_ts": 3,
+        "_rtt_ms": 7.359
+      }
+    },
+    "core-1": {
+      "node_type": "CORE",
+      "process_table": [],
+      "metrics": {
+        "status": "ok",
+        "node": "core-1",
+        "node_type": "CORE",
+        "tasks_received": 0,
+        "tasks_completed": 0,
+        "tasks_dropped": 0,
+        "tasks_rejected_no_resources": 0,
+        "avg_latency_ms": 0.0,
+        "resource_utilization": {
+          "cpu": 0.0,
+          "memory": 0.0,
+          "bandwidth": 0.0
+        },
+        "current_leader": null,
+        "lamport_ts": 4,
+        "_rtt_ms": 2.397
+      }
+    },
+    "cloud-1": {
+      "node_type": "CLOUD",
+      "process_table": [],
+      "metrics": {
+        "status": "ok",
+        "node": "cloud-1",
+        "node_type": "CLOUD",
+        "tasks_received": 0,
+        "tasks_completed": 0,
+        "tasks_dropped": 0,
+        "tasks_rejected_no_resources": 0,
+        "avg_latency_ms": 0.0,
+        "resource_utilization": {
+          "cpu": 0.0,
+          "memory": 0.0,
+          "bandwidth": 0.0
+        },
+        "current_leader": null,
+        "lamport_ts": 4,
+        "_rtt_ms": 2.525
+      }
+    }
+  }
+}
